@@ -4,6 +4,7 @@
     "description": "typescript roadmap examples",
     "main": "main.js",
     "scripts": {
+        "build": "tsc",
         "start": "tsc && node dist/main.js",
         "format": "prettier --write \"src/**/*.ts\""
     },
