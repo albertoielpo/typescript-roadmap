@@ -6,7 +6,7 @@ import { readFile } from "node:fs/promises";
     const content = await readFile(
         "/home/alberto/dev/git/typescript-roadmap/package.json"
     );
-    // bad
+    // bad 💩
     const xx = readFileSync(
         "/home/alberto/dev/git/typescript-roadmap/package.json"
     );

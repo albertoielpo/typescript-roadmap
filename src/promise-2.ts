@@ -14,6 +14,7 @@
 
     /** promise all ... wait the last one... */
     console.log("sync 1");
+    // if one fails... then all fails
     // Promise.all([myAsyncFunction(2000, false), myAsyncFunction(1000, true)])
     //     .then((res) => {
     //         /** good */
@@ -24,6 +25,7 @@
     //         console.error(err);
     //     });
 
+    // it's a race here! 🚀
     // Promise.race([myAsyncFunction(2000, false), myAsyncFunction(1000, false)])
     //     .then((res) => {
     //         /** good */
@@ -34,23 +36,25 @@
     //         console.error(err);
     //     });
 
+    //✅ good!
     Promise.allSettled([
         myAsyncFunction(2000, false),
         myAsyncFunction(1000, true)
     ])
         .then((res) => {
-            /** good */
             for (let cur of res) {
                 if (cur.status === "fulfilled") {
+                    /** resolve code ... */
                     console.log("gooooood!");
                 } else {
+                    /** reject code ... */
                     console.error("baaaaaaad");
                 }
                 console.log(cur);
             }
         })
         .catch((err) => {
-            /** ko */
+            /** unexpected exception */
             console.error(err);
         });
 

@@ -1,22 +1,25 @@
-// fetch,  promise
+// promise
 
 (() => {
     function myAsyncFunction(): Promise<string> {
         return new Promise<string>((resolve, reject) => {
             setTimeout(() => {
                 //resolve("timeout...");
-                reject("errorr!!!"); //ko
+                reject("Error simulation"); //ko
             }, 1000);
         });
     }
 
     console.log("1");
     const r = myAsyncFunction();
+
+    /** then and catch management ✅ */
+
     r.then((res) => {
-        /** good */
+        /** resolve code */
         console.log(res);
     }).catch((err) => {
-        /** ko */
+        /** reject code */
         console.error(err);
     });
     console.log("2");
