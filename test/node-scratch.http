@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000
+###
+#
+###
+GET {{baseUrl}}/
+Accept: application/json
+
+###
+#
+###
+GET {{baseUrl}}/pippo
+Accept: application/json
+
+###
+#
+###
+GET {{baseUrl}}/another-path
+Accept: application/json
+
+###
+#
+###
+GET {{baseUrl}}/error-unmanaged
+Accept: application/json
+
+###
+#
+###
+GET {{baseUrl}}/error-managed
+Accept: application/json
