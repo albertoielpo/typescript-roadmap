@@ -2,7 +2,7 @@
     "name": "typescript-roadmap",
     "version": "1.0.0",
     "description": "typescript roadmap examples",
-    "main": "main.js",
+    "main": "dist/main.js",
     "scripts": {
         "build": "tsc",
         "start": "tsc && node dist/main.js",
@@ -10,9 +10,9 @@
     },
     "author": "Alberto Ielpo",
     "license": "ISC",
-    "dependencies": {},
     "devDependencies": {
-        "typescript": "~5.2.2",
-        "prettier": "~3.0.3"
+        "@types/node": "~18.17.1",
+        "prettier": "~3.0.3",
+        "typescript": "~5.2.2"
     }
 }
